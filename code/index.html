@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>B11-English-Janala</title>
+</head>
+
+
+<style>
+    .active {
+        background: #422AD5;
+        color: white;
+    }
+</style>
+
+<body class="">
+
+
+    <header id="header-nav" class="border-b border-gray-400 sticky bg-white z-10 top-0 opacity-90 hidden">
+        <nav class="">
+            <div class="flex justify-between px-15 py-5">
+                <div class="">
+                    <h2 class="flex font-bold items-center text-xl">English <img src="/assets/logo.png" alt=""> জানালা
+                    </h2>
+                </div>
+
+                <div class="flex gap-4">
+                    <button id="faq-btn"
+                        class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                            class="fa-solid fa-circle-question"></i> FAQ</button>
+                    <button id="learn-btn"
+                        class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                            class="fa-solid fa-book-open"></i> Learn</button>
+                    <button class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                            class="fa-solid fa-arrow-right-from-bracket"></i> LogOut</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <main class="">
+
+        <section class="flex justify-between" id="banner-section">
+            <div class="px-17 py-50">
+                <h1 class="text-5xl font-bold"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+                <p class="py-5 font-semibold leading-8">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন
+                    অথবা <br> আপনার দক্ষতা বাড়াতে চান, আমাদের
+                    Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
+
+                <div class="">
+                    <input id="name" class="py-2 pl-3 w-75 rounded-md mb-5 mt-5" type="text"
+                        placeholder="Enter Your Name">
+                    <br>
+                    <input id="password" class="py-2 pl-3 w-75 rounded-md relative" type="password"
+                        placeholder="Enter Your Password">
+                    <br>
+                    <button id="LogIn-btn" class="btn mt-5 bg-[#422AD5] text-white rounded-md">Get Started</button>
+                </div>
+
+            </div>
+
+            <div>
+                <img src="/assets/hero-student.png" alt="">
+            </div>
+        </section>
+
+
+
+
+
+        <section id="learn" class="mt-35 scroll-mt-50 hidden">
+            <div>
+
+                <div>
+                    <h2 class="text-center text-5xl font-bold"><span class="text-[#00BCFF]">Let's</span> Learn
+                        Vocabularies</h2>
+
+
+                    <div id="lesson-btn" class="space-x-5 mt-8 flex justify-center items-center">
+                        <!-- <button
+                            class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                                class="fa-solid fa-book-open"></i>Lesson-1</button>
+                        <button
+                            class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                                class="fa-solid fa-book-open"></i>Lesson-2</button>
+                        <button
+                            class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                                class="fa-solid fa-book-open"></i>Lesson-3</button>
+                        <button
+                            class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                                class="fa-solid fa-book-open"></i>Lesson-1</button>
+                        <button
+                            class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                                class="fa-solid fa-book-open"></i>Lesson-1</button>
+                        <button
+                            class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                                class="fa-solid fa-book-open"></i>Lesson-1</button>
+                        <button
+                            class="btn border-[#422AD5] border-2 text-[#422AD5] hover:text-white hover:bg-[#422AD5]"><i
+                                class="fa-solid fa-book-open"></i>Lesson-1</button> -->
+                    </div>
+                    <div id="load" class="text-center mt-5 hidden"><span class="loading loading-dots loading-xl"></span>
+                    </div>
+                    <div id="card-container" class="grid grid-cols-3 mt-10 bg-gray-100 p-5 mx-30 rounded-xl gap-y-5">
+                        <div class="col-span-3 text-center py-5">
+                            <h4 class="font-semibold text-[13px] text-gray-400">আপনি এখনো কোন Lesson Select করেন ন</h4>
+                            <h2 class="text-3xl mt-5 font-semibold">একটি <span class="font-bold">Lesson Select</span>
+                                করুন।</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- <div class="text-center mt-10 bg-gray-100 p-20 mx-17">
+                    <h4 class="font-semibold text-[13px] text-gray-400">আপনি এখনো কোন Lesson Select করেন ন</h4>
+                    <h2 class="text-3xl mt-5 font-semibold">একটি Lesson Select করুন।</h2>
+                </div> -->
+
+            </div>
+        </section>
+
+
+
+        <section id="faq" class="mt-70 mx-17 scroll-mt-28 hidden">
+            <div>
+                <h2 class="text-center text-5xl font-bold"><span class="text-[#00BCFF]">Frequently </span>Asked
+                    Questions</h2>
+
+            </div>
+
+            <div class="mt-10 space-y-5">
+                <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">1. the difference between var, let, and const?</div>
+                    <div class="collapse-content text-sm">On this website you can start from the basics.</div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">2. the difference between map(), forEach(), and filter()?
+                    </div>
+                    <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
+                        instructions sent to your email.</div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">3. explain arrow functions and how they are different from
+                        regular functions?</div>
+                    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                        changes.</div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">4. how JavaScript Promises work?</div>
+                    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                        changes.</div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">5. how closures work in JavaScript?
+                    </div>
+                    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                        changes.</div>
+                </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+    <footer class="mt-50 p-20 border-t border-gray-400">
+        <div class="flex justify-between">
+            <div class="space-y-3">
+                <h2 class="flex font-bold items-center text-xl">English <img src="/assets/logo.png" alt=""> জানালা
+                </h2>
+
+                <h4 class="font-semibold">ইংরেজি শিখুন সহজে</h4>
+                <h5 class="font-semibold">Providing ED-Tech Applications since 2025</h5>
+            </div>
+
+            <div class="mt-15">
+                <h2 class="font-semibold text-[12px] mb-3">FOLLOW US</h2>
+                <div class="space-x-1">
+                    <i class="text-2xl fa-brands fa-facebook"></i>
+                    <i class="text-2xl fa-brands fa-youtube"></i>
+                    <i class="text-2xl fa-brands fa-instagram"></i>
+                    <i class="text-2xl fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- You can open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
+    <dialog id="details-modal" class="modal">
+        <div id="" class="modal-box">
+            <div id="details-container">
+                
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button, it will close the modal -->
+                    <button class="btn mr-99 bg-[#422AD5] text-white">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+
+
+
+
+
+    <script src="/code/index.js"></script>
+</body>
+
+</html>
